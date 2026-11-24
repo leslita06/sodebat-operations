@@ -138,7 +138,7 @@ function stPill(a){return a.statut==="arret"?'<span class="pill r">À l\'arrêt<
 function carnetHTML(a,pub){
   var H=a.h,pn=H.filter(function(x){return x.k==="panne";}),pc=H.filter(function(x){return x.k==="piece";});
   var h='<div class="cn">';
-  h+='<div class="cn-top"><img src="assets/logo-sodebat.png?v=20261125a" alt="SODEBAT"><span>Carnet d\'entretien</span></div>';
+  h+='<div class="cn-top"><img src="assets/logo-sodebat.png?v=20261125b" alt="SODEBAT"><span>Carnet d\'entretien</span></div>';
   h+='<div class="cn-id"><p class="cn-n">'+esc(a.id)+'</p><h3>'+esc(a.site)+'</h3><p class="cn-s">'+esc(a.lib)+", "+esc(a.commune)+'</p><div class="cn-p">'+stPill(a)+"</div></div>";
   if(a.statut==="arret")h+='<div class="cn-al">'+ic("triangle-alert")+"<span>"+esc(a.motif)+". Intervention en cours.</span></div>";
   h+='<div class="cn-g"><div><small>Dernière visite</small><b>'+dd(a.derniere)+'</b></div><div><small>Prochaine visite</small><b>'+dd(a.prochaine)+'</b></div><div><small>Pannes sur 12 mois</small><b>'+pn.length+'</b></div><div><small>Pièces changées</small><b>'+pc.length+"</b></div></div>";
